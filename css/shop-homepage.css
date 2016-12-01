@@ -9,8 +9,13 @@ body {
     background-color: #282828;
 }
 
-.slide-image {
-    width: 100%;
+.caption {
+    height: 80px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
 }
 
 .carousel-holder {
@@ -22,16 +27,19 @@ body {
     border-radius: 4px;
 }
 
-.caption {
-    height: 80px;
-    overflow: hidden;
+footer {
+    margin: 50px 0;
 }
 
-.caption h4 {
-    white-space: nowrap;
+.page-header h2 {
+    color: white;
 }
 
-.thumbnail img {
+.page-header, #header-contact {
+    color: white;
+}
+
+.slide-image {
     width: 100%;
 }
 
@@ -44,6 +52,5 @@ body {
     color: #333;
 }
 
-footer {
-    margin: 50px 0;
-}
+.thumbnail img {
+    width: 100%;
