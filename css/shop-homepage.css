@@ -4,6 +4,13 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+a.caret-before {
+    padding-right: 1px !important;
+}
+a.caret-after {
+    padding-left: 1px !important;
+}
+
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     background-color: #282828;

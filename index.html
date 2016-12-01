@@ -35,7 +35,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="caret-before">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle caret-after" data-toggle="dropdown">
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#available">Available boxes</a></li>
+                            <li><a tabindex="-1" href="#sold">Sold boxes</a></li>
+                            <li><a tabindex="-1" href="#custom">Custom boxes</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -52,12 +62,14 @@
                     <div class="col-md-12">
                         <div class="jumbotron">
                             <h2>Beautiful High Quality Wooden Boxes - Steve's Woodwork</h2>
+                            <p class="lead">Well built and highly crafted, somewhat traditional large custom handcrafted wooden boxes that you can place in view and proudly display for all to see. Using only the rarest wood of it's species, we achieve strength in construction, highest possible quality and beautiful wood that is unmatched. We make custom Humidors, personalized keepsake boxes, handcrafted Jewelry boxes, or any custom wooden box of your design. Each box is handmade and unique.
+Steve's Woodwork specializes in high quality wooden boxes. All solid 3/4" thick, no laminates, and using only the finest materials with no compromises to achieve what we hope is a true old school heirloom that you and your family will enjoy for many generations. Our chosen wood is very rare and becoming more difficult to find as the supply becomes extinct, endangered or banned from import.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Available boxes -->
                 <div class="page-header">
-                    <h2>Available Boxes: <small>click photo to see more</small></h2>
+                    <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>            
                 </div>
                 <!-- first row -->
@@ -122,7 +134,7 @@
                 </div>               
                 <!-- sold boxes -->
                 <div class="page-header">
-                    <h2>Sold Boxes: <small>(order one like it) click photo to see more</small></h2>
+                    <h2 id="sold">Sold Boxes: <small>(order one like it) click photo to see more</small></h2>
                 </div>
                 <!-- third row -->
                 <div class="row">
@@ -186,7 +198,7 @@
                 </div>
                 <!-- custom boxes -->
                 <div class="page-header">
-                    <h2>Custom built orders: <small>click photo to see more</small></h2>
+                    <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
                 </div>
                 <!-- fifth row -->
                 <div class="row">
@@ -220,8 +232,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.container -->
+    </div><!-- /.container -->
     <div class="container">
         <hr>
         <!-- Footer -->
