@@ -4,15 +4,17 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
+
 a.caret-before {
     padding-right: 1px !important;
 }
+
 a.caret-after {
     padding-left: 1px !important;
 }
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     background-color: #282828;
 }
 
@@ -35,14 +37,25 @@ body {
 }
 
 footer {
+    color: white;
     margin: 0;
+}
+
+.jumbotron {
+    padding-top: 100px;
+    background-color: #566D7E
 }
 
 .page-header h2 {
     color: white;
 }
 
-.page-header, #header-contact {
+.jumbotron p {
+    color: white;
+}
+
+.page-header, 
+#header-contact {
     color: white;
 }
 
@@ -52,12 +65,20 @@ footer {
 
 .thumbnail {
     padding: 0;
+    background-color: #566D7E;
 }
 
-.thumbnail .caption-full {
+.thumbnail a {
+    color: white;
+}
+
+.thumbnail 
+.caption-full {
     padding: 9px;
     color: #333;
 }
 
-.thumbnail img {
+.thumbnail 
+img {
     width: 100%;
+}
