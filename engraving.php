@@ -19,43 +19,10 @@
     <![endif]-->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Steve's Woodwork</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" class="caret-before">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle caret-after" data-toggle="dropdown">
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="index.html#available">Available boxes</a></li>
-                            <li><a tabindex="-1" href="index.html#sold">Sold boxes</a></li>
-                            <li><a tabindex="-1" href="index.html#custom">Custom boxes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="custom.html">Custom Shop</a></li>
-                    <li><a href="engraving.html">Engraving</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    
+    <?php
+        include("navbar.php");
+    ?>
 
     <div class="jumbotron">
         <div class="container">
@@ -67,6 +34,9 @@ We will submit preliminary layout for your approval.
 Just call or email to get started.
             </p>
         </div>
+    </div>
+
+    <div class="page-header">
     </div>
     <!-- Page Content -->
     <div class="container">

@@ -19,60 +19,10 @@
     <![endif]-->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Steve's Woodwork</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" class="caret-before">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle caret-after" data-toggle="dropdown">
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="index.html#available">Available boxes</a></li>
-                            <li><a tabindex="-1" href="index.html#sold">Sold boxes</a></li>
-                            <li><a tabindex="-1" href="index.html#custom">Custom boxes</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="custom.html">Custom Shop</a></li>
-                    <li><a href="engraving.html">Engraving</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
 
-    <!--<div class="container">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/U7iK-JbuNeA" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="thumbnail">
-            <div class="caption-full">
-                <h4 class="pull-right">$700.00</h4>
-                <h4>Yellowheart with Ebony trim</h4>
-                <p class="lead text-muted">
-                    This custom wooden memory box is made with solid Yellow-heart wood, and Ebony trim. If your looking for something that will stand out
-                    this box is for you. Bright and beautiful with a Buffed lacquer finish, and machined solid brass gold plated hinges.
-                    You can add personal engraving, just call me 209-505-5988.
-                </p>
-            </div>
-        </div>
-    </div>-->
+    <?php
+        include("navbar.php");
+    ?>
 
     <div class="jumbotron">
         <div class="container">
