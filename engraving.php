@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
 <body>
     
     <?php
-        include("navbar.php");
+        include("includes/navbar.php");
     ?>
 
     <div class="jumbotron">

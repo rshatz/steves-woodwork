@@ -19,9 +19,9 @@
     <![endif]-->
 </head>
 <body>
-    
+
 <?php
-    include("navbar.php");
+    include("includes/navbar.php");
 ?>
 
     <div class="jumbotron">
@@ -36,7 +36,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12">                
+            <div class="col-md-12">
                 <!-- Available boxes -->
                 <div class="page-header">
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
@@ -66,7 +66,7 @@
                         <div class="thumbnail">
                             <a href="item.php"><img src="img/box_31/31_1.jpg" alt="Yellowheart with Ebony trim"></a>
                             <div class="caption">
-                                <h4><a href="item.html">Yellowheart with Ebony trim</a></h4>
+                                <h4><a href="item.php">Yellowheart with Ebony trim</a></h4>
                                 <h4>$700.00</h4>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                </div>               
+                </div>
                 <!-- sold boxes -->
                 <div class="page-header">
                     <h2 id="sold">Sold Boxes: <small>(order one like it) click photo to see more</small></h2>
@@ -134,7 +134,7 @@
                                 <h4 style="color:red;">Sold</h4>
                             </div>
                         </div>
-                    </div>                
+                    </div>
                 </div>
                 <!-- fourth row -->
                 <div class="row">
