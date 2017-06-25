@@ -43,24 +43,10 @@
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
-                <!-- first row -->
-                <div class="row">
-                    <?php 
-                        $query = query("SELECT * FROM boxes");
-                        while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)): ?>
-                            
-                                <div class="col-sm-4 col-lg-4 col-md-4">
-                                    <div class="thumbnail">
-                                        <a href="#"><img src=<?php echo $row['image'] ?> ></a>
-                                        <div class="caption">
-                                            <h4><a href="#"><?php echo $row['title'] ?></a></h4>
-                                            <h4><?php echo $row['price'] ?></h4>
-                                        </div>
-                                    </div>
-                                </div> 
-                            
-                    <?php endwhile; ?>
-                </div>
+
+                <!-- available boxes -->
+                <div class="row"><?php get_items() ?></div>
+
                 <!-- custom boxes -->
                 <div class="page-header">
                     <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>

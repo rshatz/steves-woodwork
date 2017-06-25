@@ -30,39 +30,26 @@ function query($sql) {
     // }
 }
 
-// function get_products() {
-    
-//     $query = query("SELECT * FROM boxes");
+function get_items() { // add perameter to test availability 
 
-    //while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
-//        echo '<img src=' . $row['image'] . '>';
-//        $box = <<<EOT
-        
-//         <div class="row">
-//             <div class="col-sm-4 col-lg-4 col-md-4">
-//                 <div class="thumbnail">
-//                     <a href="#"><img src={$row['image']}></a>
-//                     <div class="caption">
-//                         <h4><a href="#">Spalted Maple with Cocobolo trim</a></h4>
-//                         <h4>$600.00</h4>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-// EOT;
+    $query = query("SELECT * FROM boxes"); // Add WHERE to check for available, sold, or custom
     
-    //    echo '<div class="row">
-    //             <div class="col-sm-4 col-lg-4 col-md-4">
-    //                 <div class="thumbnail">
-    //                 <a href="#"><img src=' . $row['image'] . '></a>
-    //                     <div class="caption">
-    //                         <h4><a href="#">' . $row['title'] . '</a></h4>
-    //                         <h4>' . $row['price'] '</h4>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>'
-    
+    while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
+        // heredoc identifier
+        $item = <<<IDENTIFIER
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <a href="#"><img src="{$row['image']}" alt="{$row['title']}"></a>
+                    <div class="caption">
+                        <h4><a href="#">{$row['title']}</a></h4>
+                        <h4>{$row['price']}</h4>
+                    </div>
+                </div>
+            </div>
+IDENTIFIER;
 
+        echo $item;
+    }
+}
 
 ?>
