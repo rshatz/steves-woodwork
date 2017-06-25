@@ -14,8 +14,8 @@ a.caret-after {
     padding-left: 1px !important;
 }
 
-body {
-    background-color: #282828;
+html, body {
+    background-color: #282828; 
 }
 
 .caption {

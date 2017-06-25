@@ -34,56 +34,40 @@
             </p>
         </div>
     </div>
-    <!-- Page Content -->
+
+    <!-- Begin display of boxes -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <!-- Available boxes -->
+
+                <!-- Available section -->
                 <div class="page-header">
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
-
-                <!-- available boxes -->
+                <!-- Display available boxes -->
                 <div class="row"><?php get_items() ?></div>
 
-                <!-- custom boxes -->
+                <!-- Sold section -->
+                <div class="page-header">
+                    <h2 id="sold">Sold Boxes: <small>click photo to see more</small></h2>
+                    <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
+                </div>
+                <!-- Display sold boxes -->
+                <div class="row"><?php get_items() ?></div>
+
+                <!-- Custom section -->
                 <div class="page-header">
                     <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
-                </div>
-                <!-- fifth row -->
-                <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/custom-1.jpg" alt="Figured Western Black Walnut"></a>
-                            <div class="caption">
-                                <h4><a href="#">Figured Western Black Walnut</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/custom-2.jpg" alt="Cocobolo"></a>
-                            <div class="caption">
-                                <h4><a href="#">Cocobolo</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/custom-3.jpg" alt="Figured black Walnut with Ebony trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Figured black Walnut with Ebony trim</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
+                <!-- Display custom boxes -->
+                <div class="row"><?php get_items() ?></div>
+
             </div>
         </div>
-    </div><!-- /.container -->
+
+    </div><!-- End display of boxes -->
+
     <div class="container">
         <hr>
         <!-- Footer -->
@@ -95,7 +79,7 @@
             </div>
         </footer>
     </div>
-    <!-- /.container -->
+   
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

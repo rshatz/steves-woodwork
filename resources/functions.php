@@ -2,10 +2,11 @@
 
 function connect() {
     
-    require("mysqli_connect.php");
+    require_once("mysqli_connect.php");
 
     $db_link = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
         OR die('could not connect to MySQL: ' . mysqli_connect_error());
+
     return $db_link;
 }
 
@@ -14,7 +15,8 @@ function query($sql) {
     $db_link = connect();
     $result = @mysqli_query($db_link, $sql);
     $num_rows = mysqli_num_rows($result);
-
+    
+    mysqli_close($db_link);
     return $result;
 
     // if ($num_rows > 0) {
@@ -50,6 +52,7 @@ IDENTIFIER;
 
         echo $item;
     }
+
 }
 
 ?>
