@@ -13,11 +13,12 @@ function connect() {
 function query($sql) {
     
     $db_link = connect();
-    $result = @mysqli_query($db_link, $sql);
-    $num_rows = mysqli_num_rows($result);
+    $q_result = @mysqli_query($db_link, $sql);
+    //$num_rows = mysqli_num_rows($result);
     
     mysqli_close($db_link);
-    return $result;
+
+    return $q_result;
 
     // if ($num_rows > 0) {
 
@@ -32,11 +33,11 @@ function query($sql) {
     // }
 }
 
-function get_items() { // add perameter to test availability 
+function get_items($status) {  
 
-    $query = query("SELECT * FROM boxes"); // Add WHERE to check for available, sold, or custom
+    $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); 
     
-    while ($row = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
+    while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
         // heredoc identifier
         $item = <<<IDENTIFIER
             <div class="col-sm-4 col-lg-4 col-md-4">
@@ -52,6 +53,8 @@ IDENTIFIER;
 
         echo $item;
     }
+
+    mysqli_free_result($q_result);
 
 }
 
