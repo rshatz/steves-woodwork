@@ -22,6 +22,7 @@
 
 <?php
     include("includes/navbar.php");
+    include("resources/functions.php");
 ?>
 
     <div class="jumbotron">
@@ -42,130 +43,10 @@
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
-                <!-- first row -->
-                <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/SpaltedMaple-CocoboloTrim.jpg" alt="Spalted Maple with Cocobolo trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Spalted Maple with Cocobolo trim</a></h4>
-                                <h4>$600.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/CrotchWalnut-BuckEyeBurl.jpg" alt="Crotch Walnut and Buckeye Burl"></a>
-                            <div class="caption">
-                                <h4><a href="#">Crotch Walnut and Buckeye Burl</a></h4>
-                                <h4>$1075.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="item.php"><img src="img/box_31/31_1.jpg" alt="Yellowheart with Ebony trim"></a>
-                            <div class="caption">
-                                <h4><a href="item.php">Yellowheart with Ebony trim</a></h4>
-                                <h4>$700.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- second row -->
-                <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/81-1.jpg" alt="Ambrosia Maple with figured Walnut and Maple trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Ambrosia Maple with figured Walnut and Maple trim</a></h4>
-                                <h4>$1025.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/88-1.jpg" alt="Cherry Burl laminate over Red Oak"></a>
-                            <div class="caption">
-                                <h4><a href="#">Cherry Burl laminate over Red Oak</a></h4>
-                                <h4>$1600.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/86-1.jpg" alt="Myrtle body with Ebony and Walnut trim "></a>
-                            <div class="caption">
-                                <h4><a href="#">Myrtle body with Ebony and Walnut trim </a></h4>
-                                <h4>$1075.00</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- sold boxes -->
-                <div class="page-header">
-                    <h2 id="sold">Sold Boxes: <small>(order one like it) click photo to see more</small></h2>
-                </div>
-                <!-- third row -->
-                <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-1.jpg" alt=""></a>
-                            <div class="caption">
-                                <h4><a href="#">Figured Myrtle & Myrtle Burl w/Ebony trim</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-2.jpg" alt="Figured Mable with Ebony trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Figured Mable with Ebony trim</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-3.jpg" alt="Figured Western Black Walnut with Ebony trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Figured Western Black Walnut with Ebony trim</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- fourth row -->
-                <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-4.jpg" alt="Myrtle Burl with Macassar Ebony"></a>
-                            <div class="caption">
-                                <h4><a href="#">Myrtle Burl with Macassar Ebony</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-5.jpg" alt="Myrtle with black & white Ebony trim"></a>
-                            <div class="caption">
-                                <h4><a href="#">Myrtle with black & white Ebony trim</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <a href="#"><img src="img/sold-6.jpg" alt="Book-matched Claro Crotch Walnut with Gaboon Ebony"></a>
-                            <div class="caption">
-                                <h4><a href="#">Book-matched Claro Crotch Walnut with Gaboon Ebony</a></h4>
-                                <h4 style="color:red;">Sold</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- available boxes -->
+                <div class="row"><?php get_items() ?></div>
+
                 <!-- custom boxes -->
                 <div class="page-header">
                     <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
