@@ -38,6 +38,13 @@ function get_items($status) {
     $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); 
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
+
+        // if item is available list price. Else display "SOLD"
+        if ($row['availability'] == 'available') {
+            $price = $row['price'];
+        } else {
+            $price = "SOLD";
+        }
         // heredoc identifier
         $item = <<<IDENTIFIER
             <div class="col-sm-4 col-lg-4 col-md-4">
@@ -45,7 +52,7 @@ function get_items($status) {
                     <a href="#"><img src="{$row['image']}" alt="{$row['title']}"></a>
                     <div class="caption">
                         <h4><a href="#">{$row['title']}</a></h4>
-                        <h4>{$row['price']}</h4>
+                        <h4>$price</h4>
                     </div>
                 </div>
             </div>
