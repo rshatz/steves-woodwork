@@ -35,26 +35,42 @@ function get_items($status) {
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
 
-        // if item is available list price. Else display "SOLD"
-        if ($row['availability'] == 'available') {
-            $price = $row['price'];
-        } else {
-            $price = "SOLD";
-        }
-        // heredoc identifier
-        $item = <<<IDENTIFIER
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <a href="#"><img src="{$row['image']}" alt="{$row['title']}"></a>
-                    <div class="caption">
-                        <h4><a href="#">{$row['title']}</a></h4>
-                        <h4>$price</h4>
-                    </div>
+        echo "<div class='col-sm-4 col-lg-4 col-md-4'>
+                <div class='thumbnail'>
+                    <a href='item.php?id={$row['product_id']}'><img src={$row['image']} alt={$row['title']}></a>
+                    <div class='caption'>
+                        <h4><a href='item.php?id={$row['product_id']}'>{$row['title']}</a></h4>";
+                        
+                        // if item is available list price. Else display "SOLD"
+                        if ($row['availability'] == 'available') {
+                            //$dollar_sign = '<p>&#36</p>';
+                            $price =  $row['price'];
+                            echo '<h4>' . $price . '</h4>';
+                        } else {
+                            $price = "SOLD";
+                            echo '<h4 style="color:red">' . $price . '</h4>';
+                        }
+                        
+        
+        
+        echo        "</div>
                 </div>
-            </div>
-IDENTIFIER;
+            </div>";
 
-        echo $item;
+        // heredoc identifier
+        // $item = <<<IDENTIFIER
+        //     <div class="col-sm-4 col-lg-4 col-md-4">
+        //         <div class="thumbnail">
+        //             <a href="item.php?id={$row['product_id']}"><img src="{$row['image']}" alt="{$row['title']}"></a>
+        //             <div class="caption">
+        //                 <h4><a href="#">{$row['title']}</a></h4>
+        //                 <h4>$price</h4>
+        //             </div>
+        //         </div>
+        //     </div>
+// IDENTIFIER;
+
+        //echo $item;
     }
 
     mysqli_free_result($q_result);
