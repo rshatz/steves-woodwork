@@ -14,23 +14,19 @@ function query($sql) {
     
     $db_link = connect();
     $q_result = @mysqli_query($db_link, $sql);
-    //$num_rows = mysqli_num_rows($result);
+    $num_rows = mysqli_num_rows($q_result);
+
+    if ($num_rows == 0) {
+
+        // Public message:
+        echo '<p class="error">System Error</p>';
     
-    mysqli_close($db_link);
-
-    return $q_result;
-
-    // if ($num_rows > 0) {
-
-    //     return $result;
-
-    // } else {
-    //     // Public message:
-    //     echo '<p class="error">System Error</p>';
-    
-    //     // Debugging Message:
-    //     echo '<p>' . mysqli_error($db_link) . '<br /><br />Query: ' . $sql . '</p>';
-    // }
+        // Debugging Message:
+        echo '<p>' . mysqli_error($db_link) . '<br /><br />Query: ' . $sql . '</p>';
+    } else {
+        mysqli_close($db_link);
+        return $q_result;
+    }
 }
 
 function get_items($status) {  
