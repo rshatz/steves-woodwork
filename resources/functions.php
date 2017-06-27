@@ -29,9 +29,9 @@ function query($sql) {
     }
 }
 
-function get_items($status) {  
+function get_items($status) { // parameter $status holds box availability status. some boxes are not available because they are sold 
 
-    $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); 
+    $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); // determine which boxes to display based on availability
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
 
@@ -39,42 +39,19 @@ function get_items($status) {
                 <div class='thumbnail'>
                     <a href='item.php?id={$row['product_id']}'><img src={$row['image']} alt={$row['title']}></a>
                     <div class='caption'>
-                        <h4><a href='item.php?id={$row['product_id']}'>{$row['title']}</a></h4>";
-                        
-                        // if item is available list price. Else display "SOLD"
+                        <h4><a href='item.php?id={$row['product_id']}'>{$row['title']}</a></h4>";        
+                        // if item is available display price. Else display "SOLD"
                         if ($row['availability'] == 'available') {
-                            //$dollar_sign = '<p>&#36</p>';
-                            $price =  $row['price'];
-                            echo '<h4>' . $price . '</h4>';
+                            echo '<h4 style="color:white">$' . $row['price'] . '</h4>';
                         } else {
-                            $price = "SOLD";
-                            echo '<h4 style="color:red">' . $price . '</h4>';
-                        }
-                        
-        
-        
+                            echo '<h4 style="color:red">SOLD</h4>';
+                        }       
         echo        "</div>
                 </div>
             </div>";
-
-        // heredoc identifier
-        // $item = <<<IDENTIFIER
-        //     <div class="col-sm-4 col-lg-4 col-md-4">
-        //         <div class="thumbnail">
-        //             <a href="item.php?id={$row['product_id']}"><img src="{$row['image']}" alt="{$row['title']}"></a>
-        //             <div class="caption">
-        //                 <h4><a href="#">{$row['title']}</a></h4>
-        //                 <h4>$price</h4>
-        //             </div>
-        //         </div>
-        //     </div>
-// IDENTIFIER;
-
-        //echo $item;
     }
 
     mysqli_free_result($q_result);
-
 }
 
 ?>

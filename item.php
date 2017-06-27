@@ -22,15 +22,18 @@
 
     <?php
         include("includes/navbar.php");
+        include("resources/functions.php");
     ?>
 
     <div class="jumbotron">
         <div class="container">
             <h2 class="text-center">Yellowheart with Ebony trim</h2>
             <p class="lead text-muted">
-                This custom wooden memory box is made with solid Yellow-heart wood, and Ebony trim. If your looking for something that will stand out
-                this box is for you. Bright and beautiful with a Buffed lacquer finish, and machined solid brass gold plated hinges.
-                You can add personal engraving, just call me 209-505-5988.
+                <?php
+                    $q_result = query("SELECT description FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']) . " ");
+                    $d = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
+                    echo $d['description'];
+                ?>
             </p>
         </div>
     </div>
