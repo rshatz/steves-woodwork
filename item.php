@@ -23,28 +23,27 @@
     <?php
         include("includes/navbar.php");
         include("resources/functions.php");
+
+        $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']) . " ");
+        $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
     ?>
 
     <div class="jumbotron">
         <div class="container">
             <h2 class="text-center">Yellowheart with Ebony trim</h2>
             <p class="lead text-muted">
-                <?php
-                    $q_result = query("SELECT description FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']) . " ");
-                    $d = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
-                    echo $d['description'];
-                ?>
+                <?php echo $item_data['description'];?>
             </p>
         </div>
     </div>
 
     <div class="container">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/U7iK-JbuNeA" frameborder="0" allowfullscreen></iframe>
+             <?php echo "<iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>"; ?>
         </div>
         <div class="page-header">
-            <h4 class="pull-right">$700.00</h4>
-            <h4>Yellow Heart with ebony trim keepsake box #31</h4>
+            <h4 class="pull-right"><?php echo $item_data['price']; ?></h4>
+            <h4><?php echo $item_data['title']; ?> Box# <?php echo $item_data['box_number']; ?></h4>
         </div>
     </div>
 
