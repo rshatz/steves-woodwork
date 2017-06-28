@@ -30,7 +30,7 @@
 
     <div class="jumbotron">
         <div class="container">
-            <h2 class="text-center">Yellowheart with Ebony trim</h2>
+            <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
             <p class="lead text-muted">
                 <?php echo $item_data['description'];?>
             </p>
