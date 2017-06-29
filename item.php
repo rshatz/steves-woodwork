@@ -24,7 +24,7 @@
         include("includes/navbar.php");
         include("resources/functions.php");
 
-        $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']) . " ");
+        $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']));
         $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
     ?>
 
@@ -48,65 +48,40 @@
     </div>
 
     <!-- Page Content -->
+    <!--<div class="container">-->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <!-- first row -->
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_1.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_2.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                </div>
+               
+                <!-- display item images -->
+                <?php 
+               
+                    $directory = "img/boxes/" . $item_data['box_number'] . "/";
+                    $item_image = glob($directory . "*.jpg");
+                    $count = 0;
 
-                <!-- second row -->
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_3.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_4.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- third row -->
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_5.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_6.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- fourth row -->
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_7.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/box_31/31_8.jpg" alt="Yellowheart with Ebony trim">
-                        </div>
-                    </div>
-                </div>
-
+                    if ($item_image) {
+                        $count = count($item_image);
+                        echo $count;
+                        $index = 0;
+                        while ($count > $index) {
+                        echo 
+                            '<div class="row">
+                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                    <div class="thumbnail">
+                                        <img src="' . $item_image[$index] . '" alt="Yellowheart with Ebony trim">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6 col-md-6">
+                                    <div class="thumbnail">
+                                        <img src="' . $item_image[$index+1] . '" alt="Yellowheart with Ebony trim">
+                                    </div>
+                                </div>
+                            </div>';
+                            $index += 2;
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>

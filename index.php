@@ -45,8 +45,9 @@
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
+               
                 <!-- Display available boxes -->
-                <div class="row"><?php get_items('available') ?></div>
+                <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'available'") ?></div>
 
                 <!-- Sold section -->
                 <div class="page-header">
@@ -54,14 +55,14 @@
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
                 <!-- Display sold boxes -->
-                <div class="row"><?php get_items('sold') ?></div>
+                <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'sold'") ?></div>
 
                 <!-- Custom section -->
                 <div class="page-header">
                     <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
                 </div> 
                 <!-- Display custom boxes -->
-                <div class="row"><?php get_items('custom') ?></div>
+                <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'custom'") ?></div>
 
             </div>
         </div>

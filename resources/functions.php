@@ -29,15 +29,19 @@ function query($sql) {
     }
 }
 
-function get_items($status) { // parameter $status holds box availability status. some boxes are not available because they are sold 
+function get_items($sql) { // parameter $status holds box availability status. some boxes are not available because they are sold 
 
-    $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); // determine which boxes to display based on availability
+    $q_result = query($sql); // determine which boxes to display based on availability
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
 
+        $directory = "img/boxes/" . $row['box_number'] . "/";
+        $box_photo = glob($directory . "*.jpg");
+        // try and use readdir instead of glob -- $box_photo = readdir($directory);
+        
         echo "<div class='col-sm-4 col-lg-4 col-md-4'>
                 <div class='thumbnail'>
-                    <a href='item.php?id={$row['product_id']}'><img src={$row['image']} alt={$row['title']}></a>
+                    <a href='item.php?id={$row['product_id']}'><img src={$box_photo[0]} alt={$row['title']}></a>
                     <div class='caption'>
                         <h4><a href='item.php?id={$row['product_id']}'>{$row['title']}</a></h4>";        
                         // if item is available display price. Else display "SOLD"
