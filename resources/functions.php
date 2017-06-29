@@ -29,13 +29,9 @@ function query($sql) {
     }
 }
 
-function get_items($status) { // parameter $status holds box availability status. some boxes are not available because they are sold 
+function get_items($sql) { // parameter $status holds box availability status. some boxes are not available because they are sold 
 
-//$row['image']
-// foreach($images as $image) {
-//     echo '<img src="'.$image.'" /><br />';
-// }
-    $q_result = query("SELECT * FROM boxes WHERE availability = '$status'"); // determine which boxes to display based on availability
+    $q_result = query($sql); // determine which boxes to display based on availability
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
 
