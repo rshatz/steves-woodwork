@@ -19,15 +19,12 @@
     <![endif]-->
 </head>
 <body>
-
     <?php
         include("includes/navbar.php");
         include("resources/functions.php");
-
         $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']));
         $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
     ?>
-
     <div class="jumbotron">
         <div class="container">
             <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
@@ -36,56 +33,60 @@
             </p>
         </div>
     </div>
-
-    <div class="container">
-        <div class="embed-responsive embed-responsive-16by9">
-             <?php echo "<iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>"; ?>
-        </div>
+    <div class="container"> 
+        <?php 
+            if($item_data['youtube']) {
+                echo "<div class='embed-responsive embed-responsive-16by9'>
+                        <iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>
+                    </div>";
+            }
+        ?>
         <div class="page-header">
             <h4 class="pull-right"><?php echo $item_data['price']; ?></h4>
             <h4><?php echo $item_data['title']; ?> Box# <?php echo $item_data['box_number']; ?></h4>
         </div>
     </div>
-
-    <!-- Page Content -->
-    <!--<div class="container">-->
+    <!-- individual item images -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-               
-                <!-- display item images -->
-                <?php 
-               
+                <?php // display item images
+                    
                     $directory = "img/boxes/" . $item_data['box_number'] . "/";
-                    $item_image = glob($directory . "*.jpg");
-                    $count = 0;
-
-                    if ($item_image) {
-                        $count = count($item_image);
-                        echo $count;
-                        $index = 0;
-                        while ($count > $index) {
-                        echo 
-                            '<div class="row">
-                                <div class="col-sm-6 col-lg-6 col-md-6">
-                                    <div class="thumbnail">
-                                        <img src="' . $item_image[$index] . '" alt="Yellowheart with Ebony trim">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6 col-md-6">
-                                    <div class="thumbnail">
-                                        <img src="' . $item_image[$index+1] . '" alt="Yellowheart with Ebony trim">
-                                    </div>
-                                </div>
-                            </div>';
-                            $index += 2;
+                    $images = glob($directory . "*.jpg");
+                    
+                    if ($images) {
+                        for ($index = 0; $index < count($images); $index += 2) {
+                            if ($index == count($images) - 1) { // if there is only one image left to display
+                                echo 
+                                    '<div class="row">
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <div class="thumbnail">
+                                                <img src="' .  $images[$index] . '">
+                                            </div>
+                                        </div>
+                                    </div>';
+                            } else {
+                                echo 
+                                    '<div class="row">
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <div class="thumbnail">
+                                                <img src="' .  $images[$index] . '">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-6 col-md-6">
+                                            <div class="thumbnail">
+                                                <img src="' .  $images[$index + 1] . '">
+                                            </div>
+                                        </div>
+                                    </div>';           
+                            }                      
                         }
                     }
                 ?>
             </div>
         </div>
     </div>
-
     <div class="container">
         <hr>
         <!-- Footer -->
