@@ -21,8 +21,8 @@
 <body>
 
 <?php
-    include("includes/navbar.php");
-    include("resources/functions.php");
+    include_once("includes/navbar.php");
+    include_once("resources/functions.php");
 ?>
 
     <div class="jumbotron">

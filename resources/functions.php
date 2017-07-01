@@ -19,7 +19,7 @@ function query($sql) {
     if ($num_rows == 0) {
 
         // Public message:
-        echo '<p class="error">System Error</p>';
+        echo '<p class="error">System Error: number of rows returned = 0</p>';
     
         // Debugging Message:
         echo '<p>' . mysqli_error($db_link) . '<br /><br />Query: ' . $sql . '</p>';

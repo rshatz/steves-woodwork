@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -62,7 +62,7 @@
                                     '<div class="row">
                                         <div class="col-sm-6 col-lg-6 col-md-6">
                                             <div class="thumbnail">
-                                                <img src="' . $images[$index] . '">
+                                                <img src="' .  $images[$index] . '">
                                             </div>
                                         </div>
                                     </div>';

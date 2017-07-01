@@ -1,3 +1,8 @@
+<?php 
+    include_once("resources/functions.php");
+    $q_result = query("SELECT * FROM boxes WHERE product_id = 2");
+    $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
+?>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -25,6 +30,7 @@
                             <li><a tabindex="-1" href="index.php#custom">Custom boxes</a></li>
                         </ul>
                     </li>
+                    <li><?php echo "<a href='box_type.php?id={$item_data['product_id']}'>Humidor</a>" ?></li>
                     <li><a href="custom.php">Custom Shop</a></li>
                     <li><a href="engraving.php">Engraving</a></li>
                     <li><a href="#">About</a></li>
