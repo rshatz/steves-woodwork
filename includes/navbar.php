@@ -1,6 +1,6 @@
 <?php 
     include_once("resources/functions.php");
-    $q_result = query("SELECT * FROM boxes WHERE product_id = 2");
+    $q_result = query("SELECT * FROM boxes WHERE type = 'humidor'");
     $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
 ?>
     <!-- Navigation -->
@@ -24,13 +24,13 @@
                         <a class="dropdown-toggle caret-after" data-toggle="dropdown">
                             <b class="caret"></b>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="index.php#available">Available boxes</a></li>
-                            <li><a tabindex="-1" href="index.php#sold">Sold boxes</a></li>
-                            <li><a tabindex="-1" href="index.php#custom">Custom boxes</a></li>
+                        <ul class="dropdown-menu" style="color:red">
+                            <li><a tabindex="1" href="index.php#available">Available boxes</a></li>
+                            <li><a tabindex="2" href="index.php#sold">Sold boxes</a></li>
+                            <li><a tabindex="3" href="index.php#custom">Custom boxes</a></li>
                         </ul>
                     </li>
-                    <li><?php echo "<a href='box_type.php?id={$item_data['product_id']}'>Humidor</a>" ?></li>
+                    <li><?php echo "<a href='box_type.php?id={$item_data['type']}'>Humidor</a>" ?></li>
                     <li><a href="custom.php">Custom Shop</a></li>
                     <li><a href="engraving.php">Engraving</a></li>
                     <li><a href="#">About</a></li>

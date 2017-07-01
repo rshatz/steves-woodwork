@@ -4,7 +4,7 @@ function connect() {
     
     require_once("mysqli_connect.php");
 
-    $db_link = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+    $db_link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
         OR die('could not connect to MySQL: ' . mysqli_connect_error());
 
     return $db_link;
@@ -19,10 +19,10 @@ function query($sql) {
     if ($num_rows == 0) {
 
         // Public message:
-        echo '<p class="error">System Error: number of rows returned = 0</p>';
+        echo '<br /><br /><br /><p class="error" style> { System Error: number of rows returned = 0 }</p>';
     
         // Debugging Message:
-        echo '<p>' . mysqli_error($db_link) . '<br /><br />Query: ' . $sql . '</p>';
+        echo '<p>{ From query($sql) function: ' . mysqli_error($db_link) . '<br />Query: ' . $sql . ' }</p>';
     } else {
         mysqli_close($db_link);
         return $q_result;

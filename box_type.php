@@ -22,7 +22,7 @@
     <?php
         include_once("includes/navbar.php");
         include_once("resources/functions.php");
-        $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']));
+        $q_result = query("SELECT * FROM boxes WHERE type = 'humidor'"); //. mysqli_real_escape_string(connect(), $_GET['id']));
         $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
     ?>
     <div class="jumbotron">
@@ -51,8 +51,9 @@
         <div class="row">
             <div class="col-md-12">
                 <?php // display item images
-                    
-                    $directory = "img/boxes/" . $item_data['box_number'] . "/";
+                while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
+           
+                    $directory = "img/boxes/" . $row['box_number'] . "/";
                     $images = glob($directory . "*.jpg");
                     
                     if ($images) {
@@ -83,6 +84,7 @@
                             }                      
                         }
                     }
+                }
                 ?>
             </div>
         </div>
