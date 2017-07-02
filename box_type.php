@@ -23,16 +23,12 @@
         include_once("includes/navbar.php");
         include_once("resources/functions.php");
     
-        $q_result = query("SELECT * FROM boxes WHERE type =" . $_GET['id']. "");
+        $q_result = query("SELECT * FROM boxes WHERE type =" . $_GET['id'] . "");
         //$q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id'] . ""));
-        $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
+        $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC); // most likely deleted. find alternative solution
     ?>
     <div class="jumbotron">
         <div class="container">
-          <?php   
-          print_r(array_count_values($item_data));
-          ?>
-          
             <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
             <p class="lead text-muted">
                 <?php echo $item_data['description'];?>
@@ -51,8 +47,9 @@
             <div class="col-md-12">
                 <?php // display item images
                 
+                mysqli_data_seek($q_result, 0); // reset $q_result pointer to 1st row
                 while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
-                    
+               
                     $directory = "img/boxes/" . $row['box_number'] . "/";
                     $images = glob($directory . "*.jpg");
 
