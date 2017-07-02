@@ -10,10 +10,10 @@ DEFINE ('DB_HOST', 'localhost');
 DEFINE ('DB_NAME', 'steveswoodwork');
 
 // Make the dbconnect:
-// $db_link = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-//     OR die('could not connect to MySQL: ' . mysqli_connect_error());
+// $db_link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+//         OR die('could not connect to MySQL: ' . mysqli_connect_error());
 
-//set the encoding
+// set the encoding
 // mysqli_set_charset($db_link, 'utf8');
 
     

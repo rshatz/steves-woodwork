@@ -22,11 +22,17 @@
     <?php
         include_once("includes/navbar.php");
         include_once("resources/functions.php");
-        $q_result = query("SELECT * FROM boxes WHERE type = 'humidor'"); //. mysqli_real_escape_string(connect(), $_GET['id']));
+    
+        $q_result = query("SELECT * FROM boxes WHERE type =" . $_GET['id']. "");
+        //$q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id'] . ""));
         $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);
     ?>
     <div class="jumbotron">
         <div class="container">
+          <?php   
+          print_r(array_count_values($item_data));
+          ?>
+          
             <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
             <p class="lead text-muted">
                 <?php echo $item_data['description'];?>
@@ -34,13 +40,6 @@
         </div>
     </div>
     <div class="container"> 
-        <?php 
-            if($item_data['youtube']) {
-                echo "<div class='embed-responsive embed-responsive-16by9'>
-                        <iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>
-                    </div>";
-            }
-        ?>
         <div class="page-header">
             <h4 class="pull-right"><?php echo $item_data['price']; ?></h4>
             <h4><?php echo $item_data['title']; ?> Box# <?php echo $item_data['box_number']; ?></h4>
@@ -51,11 +50,12 @@
         <div class="row">
             <div class="col-md-12">
                 <?php // display item images
+                
                 while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
-           
+                    
                     $directory = "img/boxes/" . $row['box_number'] . "/";
                     $images = glob($directory . "*.jpg");
-                    
+
                     if ($images) {
                         for ($index = 0; $index < count($images); $index += 2) {
                             if ($index == count($images) - 1) { // if there is only one image left to display
