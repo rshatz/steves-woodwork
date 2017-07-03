@@ -22,34 +22,34 @@
     <?php
         include_once("includes/navbar.php");
         include_once("resources/functions.php");
-    
-        $q_result = query("SELECT * FROM boxes WHERE type =" . $_GET['id'] . "");
-        //$q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id'] . ""));
-        $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC); // most likely deleted. find alternative solution
+        
+        $q_content = query("SELECT * FROM page_content WHERE page=" . $_GET['id'] . "");
+        $content_data = mysqli_fetch_array($q_content, MYSQLI_ASSOC);
+        $q_box = query("SELECT * FROM boxes WHERE type =" . $_GET['id'] . "");
+       // $q_box = query("SELECT * FROM boxes WHERE type =" . mysqli_real_escape_string(connect(), $_GET['id']) . "");
+        $box_data = mysqli_fetch_array($q_box, MYSQLI_ASSOC); // most likely deleted. find alternative solution
     ?>
     <div class="jumbotron">
         <div class="container">
-            <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
-            <p class="lead text-muted">
-                <?php echo $item_data['description'];?>
-            </p>
+            <h2 class="text-center"><?php echo $content_data['title']; ?></h2>
+            <p class="lead text-muted"><?php echo $content_data['description'];?></p>
         </div>
     </div>
-    <div class="container"> 
-        <div class="page-header">
-            <h4 class="pull-right"><?php echo $item_data['price']; ?></h4>
-            <h4><?php echo $item_data['title']; ?> Box# <?php echo $item_data['box_number']; ?></h4>
-        </div>
-    </div>
+    
     <!-- individual item images -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <?php // display item images
                 
-                mysqli_data_seek($q_result, 0); // reset $q_result pointer to 1st row
-                while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
-               
+                mysqli_data_seek($q_box, 0); // reset $q_box pointer to 1st row
+                while ($row = mysqli_fetch_array($q_box, MYSQLI_ASSOC)) {
+                    echo "<div class='container'> 
+                            <div class='page-header'>
+                                <h4 class='pull-right'>$" . $row['price'] . "</h4>
+                                <h4>" . $row['title'] . ": Box " . $row['box_number'] . "</h4>
+                            </div>
+                        </div>";
                     $directory = "img/boxes/" . $row['box_number'] . "/";
                     $images = glob($directory . "*.jpg");
 

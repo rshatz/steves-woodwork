@@ -29,9 +29,7 @@
     <div class="jumbotron">
         <div class="container">
             <h2 class="text-center"><?php echo $item_data['title']; ?></h2>
-            <p class="lead text-muted">
-                <?php echo $item_data['description'];?>
-            </p>
+                <p class="lead text-muted"><?php echo $item_data['description']; ?></p>
         </div>
     </div>
     <div class="container"> 

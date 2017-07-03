@@ -19,12 +19,10 @@
     <![endif]-->
 </head>
 <body>
-
 <?php
     include_once("includes/navbar.php");
     include_once("resources/functions.php");
 ?>
-
     <div class="jumbotron">
         <div class="container">
             <h2 class="text-center">Beautiful High Quality Wooden Boxes - Steve's Woodwork</h2>
@@ -34,21 +32,17 @@
             </p>
         </div>
     </div>
-
     <!-- Begin display of boxes -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
                 <!-- Available section -->
                 <div class="page-header">
                     <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
                     <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
-               
                 <!-- Display available boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'available'") ?></div>
-
                 <!-- Sold section -->
                 <div class="page-header">
                     <h2 id="sold">Sold Boxes: <small>click photo to see more</small></h2>
@@ -56,19 +50,15 @@
                 </div>
                 <!-- Display sold boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'sold'") ?></div>
-
                 <!-- Custom section -->
                 <div class="page-header">
                     <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
                 </div> 
                 <!-- Display custom boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'custom'") ?></div>
-
             </div>
         </div>
-
     </div><!-- End display of boxes -->
-
     <div class="container">
         <hr>
         <!-- Footer -->
@@ -80,7 +70,6 @@
             </div>
         </footer>
     </div>
-   
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
