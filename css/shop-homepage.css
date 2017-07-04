@@ -4,8 +4,19 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@font-face {
+    font-family: 'Tangerine';
+    src: url('http://fonts.googleapis.com/css?family=Tangerine'), url('fonts/EntezareZohoor2.ttf') format('truetype'), url('fonts/EntezareZohoor2.svg') format('svg');
+}
 
-
+@font-face {
+    font-family: 'Old Standard TT';
+    src: url('http://fonts.googleapis.com/css?family=Old Standard TT'), url('fonts/EntezareZohoor2.ttf') format('truetype'), url('fonts/EntezareZohoor2.svg') format('svg');
+}
+@font-face { 
+    font-family: bleeding_cowboy; 
+    src: url('../bleeding_cowboys.ttf'); 
+}
 a.caret-before {
     padding-right: 1px !important;
 }
@@ -15,6 +26,7 @@ a.caret-after {
 }
 
 html, body {
+    font-family: 'Old Standard TT', serif;
     background-color: #282828; 
 }
 
@@ -42,16 +54,26 @@ footer {
 }
 
 .jumbotron {
-    padding-top: 100px;
-    background-color: #566D7E
+    padding-top: 50px;
+    background-color: #3f362a; /* #566D7E */
 }
 
 .page-header h2 {
-    color: white;
+    font-family: 'bleeding_cowboy', 'Tangerine', serif;
+    color: #A89070;
 }
 
-.jumbotron p {
-    color: white;
+
+.jumbotron p, h2 {
+    color: #EDE1D1;
+}
+
+.navbar-brand {
+    padding-top: 20px;
+    color:#A89070 !important;
+    font-family: 'bleeding_cowboy', 'Tangerine', serif;
+    font-size: 300%;
+    text-shadow: 3px 3px 3px #566D7E; /* #aaa; */
 }
 
 .page-header, 
@@ -65,7 +87,7 @@ footer {
 
 .thumbnail {
     padding: 0;
-    background-color: #566D7E;
+    background-color: #44484d; /* #566D7E; */
 }
 
 .thumbnail a {

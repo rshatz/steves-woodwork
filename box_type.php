@@ -23,7 +23,7 @@
         include_once("includes/navbar.php");
         include_once("resources/functions.php");
         
-        $q_content = query("SELECT * FROM page_content WHERE page=" . $_GET['id'] . "");
+        $q_content = query("SELECT * FROM page_content WHERE page=" . $_GET['id'] . ""); // MUST ESCAPE STRING FOR SECURITY PLEASE ADD!!
         $content_data = mysqli_fetch_array($q_content, MYSQLI_ASSOC);
         $q_box = query("SELECT * FROM boxes WHERE type =" . $_GET['id'] . "");
        // $q_box = query("SELECT * FROM boxes WHERE type =" . mysqli_real_escape_string(connect(), $_GET['id']) . "");
@@ -43,6 +43,7 @@
                 <?php // display item images
                 
                 mysqli_data_seek($q_box, 0); // reset $q_box pointer to 1st row
+
                 while ($row = mysqli_fetch_array($q_box, MYSQLI_ASSOC)) {
                     echo "<div class='container'> 
                             <div class='page-header'>

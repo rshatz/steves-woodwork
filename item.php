@@ -41,8 +41,8 @@
             }
         ?>
         <div class="page-header">
-            <h4 class="pull-right"><?php echo $item_data['price']; ?></h4>
-            <h4><?php echo $item_data['title']; ?> Box# <?php echo $item_data['box_number']; ?></h4>
+            <h4 class="pull-right"><span  style="color:gold;">$</span><?php echo $item_data['price']; ?></h4>
+            <h4><?php echo $item_data['title']; ?> Box: <?php echo $item_data['box_number']; ?></h4>
         </div>
     </div>
     <!-- individual item images -->
