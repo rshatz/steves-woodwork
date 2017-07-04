@@ -46,7 +46,7 @@ function get_items($sql) { // parameter $status holds box availability status. s
                         <h4><a href='item.php?id={$row['product_id']}'>{$row['title']}</a></h4>";        
                         // if item is available display price. Else display "SOLD"
                         if ($row['availability'] == 'available') {
-                            echo '<h4 style="color:white"><span  style="color:gold;">$</span>' . $row['price'] . '</h4>';
+                            echo '<h4><span style="color:gold;">$</span>' . $row['price'] . '</h4>';
                         } else {
                             echo '<h4 style="color:red">SOLD</h4>';
                         }       

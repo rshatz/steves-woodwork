@@ -13,10 +13,17 @@
     font-family: 'Old Standard TT';
     src: url('http://fonts.googleapis.com/css?family=Old Standard TT'), url('fonts/EntezareZohoor2.ttf') format('truetype'), url('fonts/EntezareZohoor2.svg') format('svg');
 }
+
 @font-face { 
     font-family: bleeding_cowboy; 
     src: url('../bleeding_cowboys.ttf'); 
 }
+
+@font-face { 
+    font-family: butchsundance; 
+    src: url('../butchsundance.ttf'); 
+}
+
 a.caret-before {
     padding-right: 1px !important;
 }
@@ -54,8 +61,10 @@ footer {
 }
 
 .jumbotron {
-    padding-top: 50px;
-    background-color: #3f362a; /* #566D7E */
+    background-color: #282828;/* #3f362a;  #566D7E */
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 .page-header h2 {
@@ -63,9 +72,49 @@ footer {
     color: #A89070;
 }
 
+/* may delete panel */
+/*.panel > .panel-heading {
+    margin-top: 60px;
+    background-color: #44484d;
+    border-radius: 0px;
+}
 
-.jumbotron p, h2 {
+.panel > .panel-heading h2 {
+    color: white;
+}
+.panel {
+    background-color: #A89070;
+    border: 0 none;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-body {
     color: #EDE1D1;
+}*/
+
+/* --------------------------- */
+
+.panel-body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.jumbotron p {
+    color: #EDE1D1;
+}
+
+.jumbotron h2 {
+    font-family: 'Old Standard TT', 'Tangerine', serif;
+    color: brown;
+}
+
+.navbar .navbar-nav > li > a {
+    color: wheat;
+}
+
+.navbar .navbar-nav > li > a:hover {
+    color: brown;
 }
 
 .navbar-brand {
@@ -74,6 +123,15 @@ footer {
     font-family: 'bleeding_cowboy', 'Tangerine', serif;
     font-size: 300%;
     text-shadow: 3px 3px 3px #566D7E; /* #aaa; */
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background: #44484d;
+}
+
+
+.dropdown-menu > li > a {
+    color: white;
 }
 
 .page-header, 
@@ -87,11 +145,13 @@ footer {
 
 .thumbnail {
     padding: 0;
+    border: 0 none;
+    border-radius: 0px;
     background-color: #44484d; /* #566D7E; */
 }
 
-.thumbnail a {
-    color: white;
+.thumbnail a, h4 {
+    color: #EDE1D1;
 }
 
 .thumbnail 
@@ -103,8 +163,4 @@ footer {
 .thumbnail 
 img {
     width: 100%;
-}
-
-.thumbnail p {
-    color: white;
 }

@@ -48,8 +48,6 @@
                             <li><a href="index.php#available">Available boxes</a></li>
                             <li><a href="index.php#sold">Sold boxes</a></li>
                             <li><a href="index.php#custom">Custom boxes</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
                     <li><a href="box_type.php?id='humidor'">Humidor</a></li>
