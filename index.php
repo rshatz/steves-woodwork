@@ -25,7 +25,7 @@
 ?>
     <div class="jumbotron">
         <div class="container"> 
-            <h2 class="text-center">Beautiful High Quality Wooden Boxes - Steve's Woodwork</h2>
+            <h2 class="text-center">Beautiful High Quality Wooden Boxes</h2>
             <div class="panel-body"><p>Well built and highly crafted, somewhat traditional large custom handcrafted wooden boxes that you can place in view and proudly display for all to see. Using only the rarest wood of it's species, we achieve strength in construction, highest possible quality and beautiful wood that is unmatched. We make custom Humidors, personalized keepsake boxes, handcrafted Jewelry boxes, or any custom wooden box of your design. Each box is handmade and unique.
                     Steve's Woodwork specializes in high quality wooden boxes. All solid 3/4" thick, no laminates, and using only the finest materials with no compromises to achieve what we hope is a true old school heirloom that you and your family will enjoy for many generations. Our chosen wood is very rare and becoming more difficult to find as the supply becomes extinct, endangered or banned from import.
                     </p>
@@ -39,21 +39,21 @@
             <div class="col-md-12">
                 <!-- Available section -->
                 <div class="page-header">
-                    <h2 id="available">Available Boxes: <small>click photo to see more</small></h2>
-                    <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
+                    <div id="available"><h2 id="available">Available Boxes</h2></div>
+                    <small class="pull-right" id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
                 <!-- Display available boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'available'") ?></div>
                 <!-- Sold section -->
                 <div class="page-header">
-                    <h2 id="sold">Sold Boxes: <small>click photo to see more</small></h2>
-                    <small id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
+                    <h2 id="sold">Sold Boxes</h2>
+                    <small class="pull-right" id="header-contact">Add personal engraving to any box by calling or messaging me.</small>
                 </div>
                 <!-- Display sold boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'sold'") ?></div>
                 <!-- Custom section -->
                 <div class="page-header">
-                    <h2 id="custom">Custom built orders: <small>click photo to see more</small></h2>
+                    <h2 id="custom">Custom built orders</h2>
                 </div> 
                 <!-- Display custom boxes -->
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'custom'") ?></div>

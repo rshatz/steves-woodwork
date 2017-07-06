@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand">Steve's Woodwork</a>
-            </div>
+            </div>   
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -50,12 +50,12 @@
                             <li><a href="index.php#custom">Custom boxes</a></li>
                         </ul>
                     </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li><a href="box_type.php?id='humidor'">Humidor</a></li>
                     <li><a href="box_type.php?id='jewelry'">Jewelry</a></li>
                     <li><a href="engraving.php">Engraving</a></li>
-                    <li><a href="custom.php">Custom Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="custom.php">Custom</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

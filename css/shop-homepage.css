@@ -60,44 +60,36 @@ footer {
     margin: 0;
 }
 
+.page-header h2 {
+    font-family: 'Tangerine', serif;
+    color:#A89070;
+    font-size: 300%;
+    font-weight: medium;
+    margin: 0px;
+    padding-bottom: 0px;
+    /* text-shadow: 2px 2px 2px goldenrod; #566D7E; */
+}
+
+.page-header, available {
+    padding-bottom: 0px;
+}
+
+.page-header {
+    padding-bottom: 0px;
+}
+
+.panel-body { /* .panel-body within jumbotron */
+    padding: 0px;
+    margin: 0px;
+}
+
+/* JUMBOTRON */
+
 .jumbotron {
     background-color: #282828;/* #3f362a;  #566D7E */
     margin-top: 10px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-}
-
-.page-header h2 {
-    font-family: 'bleeding_cowboy', 'Tangerine', serif;
-    color: #A89070;
-}
-
-/* may delete panel */
-/*.panel > .panel-heading {
-    margin-top: 60px;
-    background-color: #44484d;
-    border-radius: 0px;
-}
-
-.panel > .panel-heading h2 {
-    color: white;
-}
-.panel {
-    background-color: #A89070;
-    border: 0 none;
-    border-radius: 0px;
-    margin-bottom: 0px;
-}
-
-.panel-body {
-    color: #EDE1D1;
-}*/
-
-/* --------------------------- */
-
-.panel-body {
-    padding: 0px;
-    margin: 0px;
 }
 
 .jumbotron p {
@@ -109,6 +101,8 @@ footer {
     color: brown;
 }
 
+/* NAVBAR */
+
 .navbar .navbar-nav > li > a {
     color: wheat;
 }
@@ -119,16 +113,25 @@ footer {
 
 .navbar-brand {
     padding-top: 20px;
-    color:#A89070 !important;
-    font-family: 'bleeding_cowboy', 'Tangerine', serif;
-    font-size: 300%;
-    text-shadow: 3px 3px 3px #566D7E; /* #aaa; */
+    color:wheat !important;
+    font-family: 'Tangerine', serif;
+    font-size: 350%;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px black, 2px 2px 2px goldenrod; /* #aaa; */
+
 }
 
 .navbar-nav > li > .dropdown-menu {
     background: #44484d;
 }
 
+.caret {
+    color:brown;
+}
+
+.caret-after:hover {
+    cursor: pointer;
+}
 
 .dropdown-menu > li > a {
     color: white;
@@ -136,6 +139,7 @@ footer {
 
 .page-header, 
 #header-contact {
+    padding-bottom: 20px;
     color: white;
 }
 
@@ -145,7 +149,8 @@ footer {
 
 .thumbnail {
     padding: 0;
-    border: 0 none;
+    /*border: 0 none;*/
+    border-color: wheat;
     border-radius: 0px;
     background-color: #44484d; /* #566D7E; */
 }
