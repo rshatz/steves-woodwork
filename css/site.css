@@ -1,8 +1,7 @@
-/*!
- * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+
+@import url("https://fonts.googleapis.com/css?family=Tangerine&font-effect-fire");
+@import url("https://fonts.googleapis.com/css?family=Old Standard TT");
+
 
 @font-face {
     font-family: 'Tangerine';
@@ -24,15 +23,7 @@
     src: url('../butchsundance.ttf'); 
 }
 
-a.caret-before {
-    padding-right: 1px !important;
-}
-
-a.caret-after {
-    padding-left: 1px !important;
-}
-
-html, body {
+body {
     font-family: 'Old Standard TT', serif;
     background-color: #282828; 
 }
@@ -94,47 +85,13 @@ footer {
 
 .jumbotron p {
     color: #EDE1D1;
+    text-indent:1em;  /* this is only temporary. google typography */
+    text-align:justify;
 }
 
 .jumbotron h2 {
     font-family: 'Old Standard TT', 'Tangerine', serif;
     color: brown;
-}
-
-/* NAVBAR */
-
-.navbar .navbar-nav > li > a {
-    color: wheat;
-}
-
-.navbar .navbar-nav > li > a:hover {
-    color: brown;
-}
-
-.navbar-brand {
-    padding-top: 20px;
-    color:wheat !important;
-    font-family: 'Tangerine', serif;
-    font-size: 350%;
-    font-weight: 500;
-    text-shadow: 1px 1px 1px black, 2px 2px 2px goldenrod; /* #aaa; */
-
-}
-
-.navbar-nav > li > .dropdown-menu {
-    background: #44484d;
-}
-
-.caret {
-    color:brown;
-}
-
-.caret-after:hover {
-    cursor: pointer;
-}
-
-.dropdown-menu > li > a {
-    color: white;
 }
 
 .page-header, 
@@ -149,14 +106,18 @@ footer {
 
 .thumbnail {
     padding: 0;
-    /*border: 0 none;*/
     border-color: wheat;
     border-radius: 0px;
-    background-color: #44484d; /* #566D7E; */
+    background-color: #44484d;
 }
 
 .thumbnail a, h4 {
     color: #EDE1D1;
+}
+.thumbnail a  {
+    color: #EDE1D1;
+    font-family: 'Tangerine';
+    font-size: 150%;
 }
 
 .thumbnail 

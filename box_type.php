@@ -7,10 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Shop Homepage - Start Bootstrap Template</title>
+   
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,11 +48,9 @@
                 mysqli_data_seek($q_box, 0); // reset $q_box pointer to 1st row
 
                 while ($row = mysqli_fetch_array($q_box, MYSQLI_ASSOC)) {
-                    echo "<div class='container'> 
-                            <div class='page-header'>
-                                <h4 class='pull-right'>$" . $row['price'] . "</h4>
-                                <h4>" . $row['title'] . ": Box " . $row['box_number'] . "</h4>
-                            </div>
+                    echo "<div class='page-header'>
+                            <h4 class='pull-right'>$" . $row['price'] . "</h4>
+                            <h4>" . $row['title'] . ": Box " . $row['box_number'] . "</h4>
                         </div>";
                     $directory = "img/boxes/" . $row['box_number'] . "/";
                     $images = glob($directory . "*.jpg");

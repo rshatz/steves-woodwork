@@ -1,1 +1,48 @@
 /* NAVBAR */
+
+.navbar a {
+    font-family: 'Tangerine', serif;
+    font-size: 200%;
+}
+
+a.caret-before {
+    padding-right: 1px !important;
+}
+
+a.caret-after {
+    padding-left: 1px !important;
+}
+
+.navbar .navbar-nav > li > a {
+    color: wheat;
+}
+
+.navbar .navbar-nav > li > a:hover {
+    color: brown;
+}
+
+.navbar .navbar-brand {
+    padding-top: 20px;
+    color:wheat;
+    font-family: 'Tangerine', serif;
+    font-size: 350%;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px black, 2px 2px 2px goldenrod;
+
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background: #44484d;
+}
+
+.caret {
+    color:brown;
+}
+
+.caret-after:hover {
+    cursor: pointer;
+}
+
+.dropdown-menu > li > a {
+    color: white;
+}
