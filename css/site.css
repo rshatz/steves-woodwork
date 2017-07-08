@@ -42,7 +42,7 @@ possible add carousel later
 
 body {
     font-family: 'Old Standard TT', serif;
-    background-color: #282828; 
+    background-color: #222; /*#282828; */
 }
 
 .caption {
@@ -74,7 +74,7 @@ footer {
 /* JUMBOTRON */
 
 .jumbotron {
-    background-color: #282828;
+    background-color: #222;/* #282828;*/
     margin-top: 20px;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -121,4 +121,8 @@ img {
 .panel-body {
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+
+.anchor {
+    padding-top: 20px;
 }

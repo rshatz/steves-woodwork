@@ -40,15 +40,18 @@
             <div class="col-md-12">
                 
                 <!-- Available section -->
-                <div class="page-header" id="available"><h2>Available Boxes</h2></div>
+                <div class="anchor" id="available"></div>
+                <div class="page-header"><h2>Available Boxes</h2></div>
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'available'") ?></div>
                 
                 <!-- Sold section -->
-                <div class="page-header" id="sold"><h2>Sold Boxes</h2></div>
+                <div class="anchor" id="sold"></div>
+                <div class="page-header"><h2>Sold Boxes</h2></div>
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'sold'") ?></div>
                 
                 <!-- Custom section -->
-                <div class="page-header" id="custom"><h2>Custom built orders</h2></div> 
+                <div class="anchor" id="custom"></div>
+                <div class="page-header"><h2>Custom built orders</h2></div> 
                 <div class="row"><?php get_items("SELECT * FROM boxes WHERE availability = 'custom'") ?></div>
             
             </div>

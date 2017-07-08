@@ -27,7 +27,7 @@ a.caret-after {
     font-family: 'Tangerine', serif;
     font-size: 350%;
     font-weight: 500;
-    text-shadow: 1px 1px 1px black, 2px 2px 2px goldenrod;
+    text-shadow: 2px 2px 2px black, 2px 2px 2px goldenrod;
 }
 
 .navbar-nav > li > .dropdown-menu {
@@ -48,4 +48,8 @@ a.caret-after {
 
 #brand:hover {
     color: wheat;
+}
+
+.navbar-inverse {
+    border-color: wheat;
 }
