@@ -23,6 +23,23 @@
     src: url('../butchsundance.ttf'); 
 }
 
+/*
+possible add carousel later
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+*/
+
 body {
     font-family: 'Old Standard TT', serif;
     background-color: #282828; 
@@ -37,15 +54,6 @@ body {
     white-space: nowrap;
 }
 
-.carousel-holder {
-    margin-bottom: 30px;
-}
-
-.carousel-control,
-.item {
-    border-radius: 4px;
-}
-
 footer {
     color: white;
     margin: 0;
@@ -55,30 +63,19 @@ footer {
     font-family: 'Tangerine', serif;
     color:#A89070;
     font-size: 300%;
-    font-weight: medium;
-    margin: 0px;
-    padding-bottom: 0px;
-    /* text-shadow: 2px 2px 2px goldenrod; #566D7E; */
-}
-
-.page-header, available {
-    padding-bottom: 0px;
+    font-weight: 500;
+    margin-bottom: 0px;
 }
 
 .page-header {
     padding-bottom: 0px;
 }
 
-.panel-body { /* .panel-body within jumbotron */
-    padding: 0px;
-    margin: 0px;
-}
-
 /* JUMBOTRON */
 
 .jumbotron {
-    background-color: #282828;/* #3f362a;  #566D7E */
-    margin-top: 10px;
+    background-color: #282828;
+    margin-top: 20px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
@@ -92,16 +89,6 @@ footer {
 .jumbotron h2 {
     font-family: 'Old Standard TT', 'Tangerine', serif;
     color: brown;
-}
-
-.page-header, 
-#header-contact {
-    padding-bottom: 20px;
-    color: white;
-}
-
-.slide-image {
-    width: 100%;
 }
 
 .thumbnail {
@@ -129,4 +116,9 @@ footer {
 .thumbnail 
 img {
     width: 100%;
+}
+
+.panel-body {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
