@@ -55,13 +55,13 @@ body {
 }
 
 footer {
-    color: white;
+    color: #EDE1D1;
     margin: 0;
 }
 
 .page-header h2 {
     font-family: 'Tangerine', serif;
-    color:#A89070;
+    color: wheat;/* #A89070; */
     font-size: 300%;
     font-weight: 500;
     margin-bottom: 0px;
@@ -69,6 +69,7 @@ footer {
 
 .page-header {
     padding-bottom: 0px;
+    border-color: #EDE1D1;;
 }
 
 /* JUMBOTRON */
