@@ -29,9 +29,9 @@ function query($sql) {
     }
 }
 
-function get_items($sql) { // parameter $status holds box availability status. some boxes are not available because they are sold 
+function get_items($sql) { 
 
-    $q_result = query($sql); // determine which boxes to display based on availability
+    $q_result = query($sql); 
     
     while ($row = mysqli_fetch_array($q_result, MYSQLI_ASSOC)) {
 
@@ -56,6 +56,41 @@ function get_items($sql) { // parameter $status holds box availability status. s
     }
 
     mysqli_free_result($q_result);
+}
+
+function get_all($item_data) {
+
+    $directory = "img/boxes/" . $item_data['box_number'] . "/";
+    $images = glob($directory . "*.jpg");
+                    
+    if ($images) {
+        for ($index = 0; $index < count($images); $index += 2) {
+            if ($index == count($images) - 1) { // if there is only one image left to display
+                echo 
+                    '<div class="row">
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                            <div class="thumbnail">
+                                <img src="' . $images[$index] . '">
+                            </div>
+                        </div>
+                    </div>';
+            } else {
+                echo 
+                    '<div class="row">
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                            <div class="thumbnail">
+                                <img src="' .  $images[$index] . '">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                            <div class="thumbnail">
+                                <img src="' .  $images[$index + 1] . '">
+                            </div>
+                        </div>
+                    </div>';           
+            }                      
+        }
+    }
 }
 
 ?>

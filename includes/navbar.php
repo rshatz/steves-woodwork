@@ -35,7 +35,7 @@
                     <li><a href="box_type.php?id='jewelry'">Jewelry</a></li>
                     <li><a href="engraving.php">Engraving</a></li>
                     <li><a href="custom.php">Custom</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
