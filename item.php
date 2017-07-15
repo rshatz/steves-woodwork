@@ -35,14 +35,18 @@
                 <p class="lead text-muted"><?php echo $item_data['description']; ?></p>
         </div>
     </div>
-    <div class="container"> 
-        <?php 
-            if($item_data['youtube']) {
-                echo "<div class='embed-responsive embed-responsive-16by9'>
-                        <iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>
-                    </div>";
-            }
-        ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2"> 
+            <?php 
+                if($item_data['youtube']) {
+                    echo "<div class='embed-responsive embed-responsive-16by9'>
+                            <iframe width='560' height='315' src={$item_data['youtube']} frameborder='0' allowfullscreen></iframe>
+                        </div>";
+                }
+            ?>
+            </div>
+        </div>
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
