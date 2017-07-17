@@ -62,7 +62,35 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <?php get_all($item_data); ?>
+                 <?php 
+                    $images = get_images($item_data); 
+                    for ($index = 0; $index < count($images); $index += 2) {
+                        if ($index == count($images) - 1) { // if there is only one image left to display
+                            echo 
+                                '<div class="row">
+                                    <div class="col-sm-6 col-lg-6 col-md-6">
+                                        <div class="thumbnail">
+                                            <img src="' . $images[$index] . '">
+                                        </div>
+                                    </div>
+                                </div>';
+                        } else {
+                            echo 
+                                '<div class="row">
+                                    <div class="col-sm-6 col-lg-6 col-md-6">
+                                        <div class="thumbnail">
+                                            <img src="' .  $images[$index] . '">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6 col-md-6">
+                                        <div class="thumbnail">
+                                            <img src="' .  $images[$index + 1] . '">
+                                        </div>
+                                    </div>
+                                </div>';
+                        }                      
+                    }
+                 ?> 
             </div>
         </div>
     </div>
