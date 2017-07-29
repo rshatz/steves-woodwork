@@ -4,10 +4,10 @@
 // This file also establishes a dbconnect to MySQL
 // selects the database, and sets the encoding. 
 
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'steveswoodwork');
+// DEFINE ('DB_USER', 'root');
+// DEFINE ('DB_PASSWORD', '');
+// DEFINE ('DB_HOST', 'localhost');
+// DEFINE ('DB_NAME', 'steveswoodwork');
 
 // Make the dbconnect:
 // $db_link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)

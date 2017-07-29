@@ -22,8 +22,9 @@
 </head>
 <body>
 <?php
-    include_once("includes/navbar.php");
-    include_once("resources/functions.php");
+    require_once("includes/config.php");
+    include_once(TEMPLATE_FRONT . DS . "navbar.php");
+    include_once("includes/resources/functions.php");
 ?>
     <div class="container">
         <div class="jumbotron"> 
