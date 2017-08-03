@@ -23,8 +23,9 @@
 </head>
 <body>
     <?php
-        include_once("includes/navbar.php");
-        include_once("resources/functions.php");
+    
+        require_once("includes/config.php");
+        include_once(TEMPLATE_FRONT . DS . "navbar.php");
         
         $q_result = query("SELECT * FROM boxes WHERE product_id = " . mysqli_real_escape_string(connect(), $_GET['id']));
         $item_data = mysqli_fetch_array($q_result, MYSQLI_ASSOC);

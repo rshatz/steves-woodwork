@@ -1,5 +1,7 @@
 <?php
 
+require_once("resources/functions.php");
+
 // turn on output buffering
 ob_start();
 
@@ -19,6 +21,5 @@ defined("DB_PASSWORD") ? null : define("DB_PASSWORD", "");
 defined("DB_NAME") ? null : define("DB_NAME", "steveswoodwork");
 
 //$connecton = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-//require_once("functions.php");
 
 ?>

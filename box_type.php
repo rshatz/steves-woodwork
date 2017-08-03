@@ -23,8 +23,8 @@
 </head>
 <body>
     <?php
-        include_once("includes/navbar.php");
-        include_once("resources/functions.php");
+        require_once("includes/config.php");
+        include_once(TEMPLATE_FRONT . DS . "navbar.php");
         
         $q_content = query("SELECT * FROM page_content WHERE page=" . $_GET['id'] . ""); // MUST ESCAPE STRING FOR SECURITY PLEASE ADD!!
         $content_data = mysqli_fetch_array($q_content, MYSQLI_ASSOC);
