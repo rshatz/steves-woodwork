@@ -24,7 +24,8 @@
 <body>
     
     <?php
-        include("includes/navbar.php");
+        require_once("includes/config.php");
+        include_once(TEMPLATE_FRONT . DS . "navbar.php");
     ?>
 
     <div class="jumbotron">

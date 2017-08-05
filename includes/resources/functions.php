@@ -2,13 +2,8 @@
 
 function connect() {
     
-    require_once("mysqli_connect.php");
-
-    $db_link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-        OR die('could not connect to MySQL: ' . mysqli_connect_error());
-    mysqli_set_charset($db_link, 'utf8');
-
-    return $db_link;
+    global $connection;
+    return $connection;
 }
 
 function query($sql) {
@@ -22,9 +17,7 @@ function query($sql) {
         echo '<br /><br /><br /><p class="error" style> { System Error: number of rows returned = 0 }</p>';
         // Debugging Message:
         echo '<p>{ From query($sql) function: ' . mysqli_error($db_link) . '<br />Query: ' . $sql . ' }</p>';
-        mysqli_close($db_link);
     } else {
-        mysqli_close($db_link);
         return $q_result;
     }
 }
