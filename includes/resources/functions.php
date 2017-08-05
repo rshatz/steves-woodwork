@@ -1,7 +1,7 @@
 <?php
 
 function connect() {
-
+    
     global $connection;
     return $connection;
 }
@@ -17,9 +17,7 @@ function query($sql) {
         echo '<br /><br /><br /><p class="error" style> { System Error: number of rows returned = 0 }</p>';
         // Debugging Message:
         echo '<p>{ From query($sql) function: ' . mysqli_error($db_link) . '<br />Query: ' . $sql . ' }</p>';
-        mysqli_close($db_link);
     } else {
-        mysqli_close($db_link);
         return $q_result;
     }
 }
